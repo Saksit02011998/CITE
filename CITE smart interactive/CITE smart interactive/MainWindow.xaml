@@ -1,0 +1,41 @@
+﻿<Window x:Class="CITE_smart_interactive.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CITE_smart_interactive"
+        xmlns:k="http://schemas.microsoft.com/kinect/2013"
+        mc:Ignorable="d"
+        
+        Title="MainWindow" Height="1080" Width="1920" Loaded="Window_Loaded" 
+        WindowStyle="None" WindowState="Maximized">
+    <Grid>
+        <k:KinectRegion x:Name="kinectRegion">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/bg.jpg"></ImageBrush>
+                </Grid.Background>
+                <Image Source="Images/Logo.png" Margin="1289,0,10,833"/>
+                <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="kinectSensorChooserUI"/>
+                <k:KinectUserViewer VerticalAlignment="Bottom" HorizontalAlignment="Right" UserColoringMode="HighlightPrimary" PrimaryUserColor="Black" Height="280" Width="461"/>
+                <k:KinectTileButton x:Name="Btn_news_DPU" HorizontalAlignment="Left" Margin="77,245,0,0" VerticalAlignment="Top" Height="198" Width="667">
+                    <k:KinectTileButton.Background>
+                        <ImageBrush ImageSource="Images/Button_DPU.png"/>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton x:Name="Btn_news_CITE" HorizontalAlignment="Left" Margin="77,489,0,0" VerticalAlignment="Top" Width="667" Height="198">
+                    <k:KinectTileButton.Background>
+                        <ImageBrush ImageSource="Images/Button_CITE.png"/>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton x:Name="Btn_Camera" HorizontalAlignment="Left" Margin="77,740,0,0" VerticalAlignment="Top" Width="667" Height="198" Click="Btn_Camera_Click">
+                    <k:KinectTileButton.Background>
+                        <ImageBrush ImageSource="Images/Button_Camera.png"/>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+                <Image HorizontalAlignment="Left" Height="693" Margin="766,245,0,0" VerticalAlignment="Top" Width="1110"/>
+            </Grid>
+        </k:KinectRegion>
+    </Grid>
+</Window>

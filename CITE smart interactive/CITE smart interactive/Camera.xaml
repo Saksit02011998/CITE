@@ -1,0 +1,26 @@
+﻿<Window x:Class="CITE_smart_interactive.Camera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CITE_smart_interactive"
+        xmlns:k="http://schemas.microsoft.com/kinect/2013"
+        mc:Ignorable="d"
+        Title="Camera" Height="1080" Width="1920" Loaded="Camera_Load" WindowStyle="None" WindowState="Maximized">
+    <Grid>
+        <k:KinectRegion x:Name="kinectRegion">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/bg.jpg"></ImageBrush>
+                </Grid.Background>
+                <Image x:Name="VideoKinect" HorizontalAlignment="Center" Height="640" Margin="273,105,273,199"  Width="920"/>
+                <k:KinectTileButton x:Name="Btn_Shooter" HorizontalAlignment="Left" Margin="575,814,0,0" VerticalAlignment="Top" Width="721">
+                    <k:KinectTileButton.Background>
+                        <ImageBrush ImageSource="Button_Shooter.png"/>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Name="Close" Content="ย้อนกลับ" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="150" Width="275" Background="#FFCF4949" BorderBrush="#FF91959C" Foreground="White" Click="Close_Click" Cursor="Hand"/>
+            </Grid>
+        </k:KinectRegion>
+    </Grid>
+</Window>
